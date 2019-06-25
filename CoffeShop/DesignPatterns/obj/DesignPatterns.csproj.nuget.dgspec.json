@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\HP\\Documents\\code\\design-patterns\\DesignPatterns\\DesignPatterns\\DesignPatterns.csproj": {}
+    "C:\\Users\\HP\\Documents\\code\\design-patterns\\CoffeShop\\DesignPatterns\\DesignPatterns.csproj": {}
   },
   "projects": {
-    "C:\\Users\\HP\\Documents\\code\\design-patterns\\DesignPatterns\\DesignPatterns\\DesignPatterns.csproj": {
+    "C:\\Users\\HP\\Documents\\code\\design-patterns\\CoffeShop\\DesignPatterns\\DesignPatterns.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HP\\Documents\\code\\design-patterns\\DesignPatterns\\DesignPatterns\\DesignPatterns.csproj",
+        "projectUniqueName": "C:\\Users\\HP\\Documents\\code\\design-patterns\\CoffeShop\\DesignPatterns\\DesignPatterns.csproj",
         "projectName": "DesignPatterns",
-        "projectPath": "C:\\Users\\HP\\Documents\\code\\design-patterns\\DesignPatterns\\DesignPatterns\\DesignPatterns.csproj",
+        "projectPath": "C:\\Users\\HP\\Documents\\code\\design-patterns\\CoffeShop\\DesignPatterns\\DesignPatterns.csproj",
         "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HP\\Documents\\code\\design-patterns\\DesignPatterns\\DesignPatterns\\obj\\",
+        "outputPath": "C:\\Users\\HP\\Documents\\code\\design-patterns\\CoffeShop\\DesignPatterns\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
