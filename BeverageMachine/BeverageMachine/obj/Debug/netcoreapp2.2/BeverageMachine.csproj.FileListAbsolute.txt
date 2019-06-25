@@ -1,0 +1,3 @@
+C:\Users\HP\source\repos\BeverageMachine\BeverageMachine\obj\Debug\netcoreapp2.2\BeverageMachine.csproj.CoreCompileInputs.cache
+C:\Users\HP\source\repos\BeverageMachine\BeverageMachine\obj\Debug\netcoreapp2.2\BeverageMachine.AssemblyInfoInputs.cache
+C:\Users\HP\source\repos\BeverageMachine\BeverageMachine\obj\Debug\netcoreapp2.2\BeverageMachine.AssemblyInfo.cs
