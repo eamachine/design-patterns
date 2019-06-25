@@ -1,12 +1,13 @@
-﻿using System;
+﻿using DesignPatterns.Business.Strategy;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace DesignPatterns.Business
 {
-    public class Client
+    public abstract class Client
     {
-        public bool Resident { get; set; }
+        public abstract DiscountStrategy GetDiscountStrategy();
     }
 }

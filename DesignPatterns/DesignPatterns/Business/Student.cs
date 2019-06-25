@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace DesignPatterns.Business
 {
-    public class Regular : Client
+    public class Student : Client
     {
         public override DiscountStrategy GetDiscountStrategy()
         {
-            return new DefaultStrategy();
+            return new StateStrategy();
         }
     }
 }

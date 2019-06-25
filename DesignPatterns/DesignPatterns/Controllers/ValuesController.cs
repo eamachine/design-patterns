@@ -22,19 +22,14 @@ namespace DesignPatterns.Controllers
         [HttpPost]
         public double Post([FromBody] string value)
         {
-            Client Client = new Client();
+            Client Client = new Habitual();
 
-            double subtotal = 100, total = 0;
+            double subtotal = 100;
+                
+            double total = 0;
 
-            if (Client.Resident)
-            {
-                total = subtotal * 0.9;
-            }
-
-            if (Client is Regular)
-            {
-                total = subtotal * 0.85;
-            }
+            var DescuentoStrategy = Client.GetDiscountStrategy();
+            DescuentoStrategy.Calculate(subtotal);
 
             return total;
         }

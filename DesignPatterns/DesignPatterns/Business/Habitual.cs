@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace DesignPatterns.Business
 {
-    public class Regular : Client
+    public class Habitual : Client
     {
+        public string IdClient { get; set; }
         public override DiscountStrategy GetDiscountStrategy()
         {
-            return new DefaultStrategy();
+            return new FidelityStrategy();
         }
     }
 }
