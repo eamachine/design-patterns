@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BeverageMachine.Business.Decorator;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -7,8 +8,13 @@ namespace BeverageMachine.Business
 {
     public class Order
     {
-        List<string> Beverages = new List<string>();
+        List<BeverageCommand> Beverages = new List<BeverageCommand>();
         BeverageMachine BeverageMachine = new BeverageMachine();
+
+        public Order()
+        {
+            Beverages.Add(new CreamCommand(new LiquorCommand(new CoffeCommand())));
+        }
 
         //Execute order one at time
         public void AddCommands()

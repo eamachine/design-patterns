@@ -19,16 +19,15 @@ namespace BeverageMachine.Business
             Observers.Add(new MobileAlertObserver());
         }
 
-        public void AddBeverage(string Beverage)
+        public void AddBeverage(BeverageCommand Beverage)
         {
-            if (Beverage.Equals("Cafe"))
+            if (Beverage.IsCold())
             {
-                Cold.Add(new CoffeCommand());
+                Cold.Add(Beverage);
             }
-
-            if (Beverage.Equals("Chocolate"))
+            else
             {
-                Hot.Add(new ChocolateCommand());
+                Hot.Add(Beverage);
             }
         }
 
