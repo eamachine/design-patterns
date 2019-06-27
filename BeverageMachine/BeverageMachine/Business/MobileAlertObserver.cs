@@ -1,8 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace BeverageMachine.Business
 {
-    class UIAlertComponet : BeverageMachineObserver
+    public class MobileAlertObserver : BeverageMachineObserver
     {
         public void Alert()
         {

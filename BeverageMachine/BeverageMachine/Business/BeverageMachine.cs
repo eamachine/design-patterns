@@ -11,7 +11,13 @@ namespace BeverageMachine.Business
 
         List<BeverageCommand> Hot = new List<BeverageCommand>();
 
-        UIAlertComponet uIAlertComponet = new UIAlertComponet();
+        List<BeverageMachineObserver> Observers = new List<BeverageMachineObserver>();
+
+        public BeverageMachine()
+        {
+            Observers.Add(new UIAlertComponet());
+            Observers.Add(new MobileAlertObserver());
+        }
 
         public void AddBeverage(string Beverage)
         {
@@ -31,15 +37,23 @@ namespace BeverageMachine.Business
             foreach(var Beverage in Cold)
             {
                 Beverage.Execute();
-                uIAlertComponet.AlertMe(Beverage);
+                Alert();
                 Cold.Remove(Beverage);
             }
 
             foreach (var Beverage in Hot)
             {
                 Beverage.Execute();
-                uIAlertComponet.AlertMe(Beverage);
+                Alert();
                 Cold.Remove(Beverage);
+            }
+        }
+
+        private void Alert()
+        {
+            foreach (var Observer in Observers)
+            {
+                Observer.Alert();
             }
         }
     }
