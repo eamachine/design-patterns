@@ -15,7 +15,7 @@ namespace BeverageMachine.Business
 
         public BeverageMachine()
         {
-            Observers.Add(new UIAlertComponet());
+            Observers.Add(new UIAlertObserver());
             Observers.Add(new MobileAlertObserver());
         }
 

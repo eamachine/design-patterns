@@ -2,7 +2,7 @@
 
 namespace BeverageMachine.Business
 {
-    class UIAlertComponet : BeverageMachineObserver
+    class UIAlertObserver : BeverageMachineObserver
     {
         public void Alert()
         {
