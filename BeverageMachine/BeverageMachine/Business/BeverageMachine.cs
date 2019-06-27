@@ -9,12 +9,12 @@ namespace BeverageMachine.Business
     {
         public void MakeCoffe()
         {
-
+            throw new NotImplementedException();
         }
 
         public void MakeChocolate()
         {
-
+            throw new NotImplementedException();
         }
     }
 }
