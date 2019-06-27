@@ -17,12 +17,12 @@ namespace BeverageMachine.Business
             {
                 if (Beverage.Equals("Cafe"))
                 {
-                    BeverageMachine.MakeCoffe();
+                    BeverageMachine.MakeCoffe("Taza");
                 }
 
                 if (Beverage.Equals("Chocolate"))
                 {
-                    BeverageMachine.MakeChocolate();
+                    BeverageMachine.MakeChocolate("Taza");
                 }
             }
         }

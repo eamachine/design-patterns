@@ -7,12 +7,12 @@ namespace BeverageMachine.Business
 {
     public class BeverageMachine
     {
-        public void MakeCoffe()
+        public void MakeCoffe(String Taza)
         {
             throw new NotImplementedException();
         }
 
-        public void MakeChocolate()
+        public void MakeChocolate(String Taza)
         {
             throw new NotImplementedException();
         }
