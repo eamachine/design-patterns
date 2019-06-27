@@ -10,6 +10,7 @@ namespace BeverageMachine.Business
         List<string> Beverages = new List<string>();
         BeverageMachine BeverageMachine = new BeverageMachine();
 
+        //Execute order one at time
         public void RunBeverageMachine()
         {
             foreach(var Beverage in Beverages)
