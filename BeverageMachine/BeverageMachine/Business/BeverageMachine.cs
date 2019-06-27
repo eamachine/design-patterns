@@ -7,14 +7,36 @@ namespace BeverageMachine.Business
 {
     public class BeverageMachine
     {
-        public void MakeCoffe(String Taza)
+        List<BeverageCommand> Cold = new List<BeverageCommand>();
+
+        List<BeverageCommand> Hot = new List<BeverageCommand>();
+
+        public void AddBeverage(string Beverage)
         {
-            throw new NotImplementedException();
+            if (Beverage.Equals("Cafe"))
+            {
+                Cold.Add(new CoffeCommand());
+            }
+
+            if (Beverage.Equals("Chocolate"))
+            {
+                Hot.Add(new ChocolateCommand());
+            }
         }
 
-        public void MakeChocolate(String Taza)
+        public void RunBeverageMachine()
         {
-            throw new NotImplementedException();
+            foreach(var Beverage in Cold)
+            {
+                Beverage.Execute();
+                Cold.Remove(Beverage);
+            }
+
+            foreach (var Beverage in Hot)
+            {
+                Beverage.Execute();
+                Cold.Remove(Beverage);
+            }
         }
     }
 }

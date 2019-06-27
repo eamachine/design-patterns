@@ -11,20 +11,17 @@ namespace BeverageMachine.Business
         BeverageMachine BeverageMachine = new BeverageMachine();
 
         //Execute order one at time
-        public void RunBeverageMachine()
+        public void AddCommands()
         {
             foreach(var Beverage in Beverages)
             {
-                if (Beverage.Equals("Cafe"))
-                {
-                    BeverageMachine.MakeCoffe("Taza");
-                }
-
-                if (Beverage.Equals("Chocolate"))
-                {
-                    BeverageMachine.MakeChocolate("Taza");
-                }
+                BeverageMachine.AddBeverage(Beverage);
             }
+        }
+
+        public void PrepareBeverage()
+        {
+            BeverageMachine.RunBeverageMachine();
         }
         
     }
