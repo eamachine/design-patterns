@@ -11,6 +11,8 @@ namespace BeverageMachine.Business
 
         List<BeverageCommand> Hot = new List<BeverageCommand>();
 
+        UIAlertComponet uIAlertComponet = new UIAlertComponet();
+
         public void AddBeverage(string Beverage)
         {
             if (Beverage.Equals("Cafe"))
@@ -29,12 +31,14 @@ namespace BeverageMachine.Business
             foreach(var Beverage in Cold)
             {
                 Beverage.Execute();
+                uIAlertComponet.AlertMe(Beverage);
                 Cold.Remove(Beverage);
             }
 
             foreach (var Beverage in Hot)
             {
                 Beverage.Execute();
+                uIAlertComponet.AlertMe(Beverage);
                 Cold.Remove(Beverage);
             }
         }
