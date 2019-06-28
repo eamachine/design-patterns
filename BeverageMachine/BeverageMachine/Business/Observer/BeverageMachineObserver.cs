@@ -7,6 +7,6 @@ namespace BeverageMachine.Business
 {
     public interface BeverageMachineObserver
     {
-        void Alert();
+        void Alert(String Msg);
     }
 }

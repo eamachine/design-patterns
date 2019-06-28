@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BeverageMachine.Business.State;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -13,13 +14,51 @@ namespace BeverageMachine.Business
 
         List<BeverageMachineObserver> Observers = new List<BeverageMachineObserver>();
 
+        BeverageMachineState MachineState;
+
         public BeverageMachine()
         {
             Observers.Add(new UIAlertObserver());
             Observers.Add(new MobileAlertObserver());
+            MachineState = new ReadyMachineState(this);
         }
 
         public void AddBeverage(BeverageCommand Beverage)
+        {
+            MachineState = MachineState.AddBeverage(Beverage);
+        }
+
+        //Preparar bevidas
+        public void RunBeverageMachine()
+        {
+            MachineState = MachineState.RunBeverageMachine();
+        }
+        public void Clean()
+        {
+            MachineState = MachineState.Clean();
+        }
+        public void Reset()
+        {
+            MachineState = MachineState.Reset();
+        }
+        public void Alert(String Msg)
+        {
+            foreach (var Observer in Observers)
+            {
+                Observer.Alert(Msg);
+            }
+        }
+
+        public void CleanBase()
+        {
+            Alert("cleaning");
+        }
+        public void ResetBase()
+        {
+            Alert("reseting");
+        }
+
+        public void AddBeverageBase(BeverageCommand Beverage)
         {
             if (Beverage.IsCold())
             {
@@ -30,29 +69,20 @@ namespace BeverageMachine.Business
                 Hot.Add(Beverage);
             }
         }
-        //Preparar bevidas
-        public void RunBeverageMachine()
+        public void RunBeverageMachineBase()
         {
             foreach (var Beverage in Cold)
             {
                 Beverage.Execute();
-                Alert();
+                Alert("Added");
                 Cold.Remove(Beverage);
             }
 
             foreach (var Beverage in Hot)
             {
                 Beverage.Execute();
-                Alert();
+                Alert("Added");
                 Cold.Remove(Beverage);
-            }
-        }
-
-        private void Alert()
-        {
-            foreach (var Observer in Observers)
-            {
-                Observer.Alert();
             }
         }
     }

@@ -7,7 +7,7 @@ namespace BeverageMachine.Business
 {
     public class MobileAlertObserver : BeverageMachineObserver
     {
-        public void Alert()
+        public void Alert(String Msg)
         {
             throw new NotImplementedException();
         }

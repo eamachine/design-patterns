@@ -4,7 +4,7 @@ namespace BeverageMachine.Business
 {
     class UIAlertObserver : BeverageMachineObserver
     {
-        public void Alert()
+        public void Alert(String Msg)
         {
             throw new NotImplementedException();
         }
