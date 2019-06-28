@@ -11,15 +11,15 @@ namespace BeverageMachine.Business.Decorator
         {
         }
 
-        public void Execute()
+        public override void ExecuteTemplate()
         {
+            AddLiquor();
             base.Execute();
-            throw new NotImplementedException();
         }
 
-        public bool IsCold()
+        private void AddLiquor()
         {
-            return base.IsCold();
+            throw new NotImplementedException();
         }
     }
 }

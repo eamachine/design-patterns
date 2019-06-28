@@ -30,10 +30,10 @@ namespace BeverageMachine.Business
                 Hot.Add(Beverage);
             }
         }
-
+        //Preparar bevidas
         public void RunBeverageMachine()
         {
-            foreach(var Beverage in Cold)
+            foreach (var Beverage in Cold)
             {
                 Beverage.Execute();
                 Alert();

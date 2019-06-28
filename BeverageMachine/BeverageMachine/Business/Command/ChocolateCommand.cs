@@ -8,13 +8,13 @@ namespace BeverageMachine.Business
     public class ChocolateCommand : BeverageCommand
     {
         Cup cup = new Cup();
-        public void Execute()
+        public override void ExecuteTemplate()
         {
             cup.Fill("Cacao");
             cup.Fill("Milk");
         }
 
-        public bool IsCold()
+        public override bool IsCold()
         {
             return true;
         }

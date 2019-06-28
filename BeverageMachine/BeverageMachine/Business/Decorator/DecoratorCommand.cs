@@ -13,12 +13,12 @@ namespace BeverageMachine.Business.Decorator
             _beverageCommand = beverageCommand;
         }
 
-        public void Execute()
+        public override void ExecuteTemplate()
         {
-            _beverageCommand.Execute();
+            _beverageCommand.ExecuteTemplate();
         }
 
-        public bool IsCold()
+        public override bool IsCold()
         {
             return _beverageCommand.IsCold();
         }

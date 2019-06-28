@@ -5,10 +5,27 @@ using System.Threading.Tasks;
 
 namespace BeverageMachine.Business
 {
-    public interface BeverageCommand
+    public abstract class BeverageCommand
     {
-        void Execute();
+        public void Execute()
+        {
+            CleanCup();
+            AddStirrer();
+            ExecuteTemplate();
+        }
 
-        bool IsCold();
+        private void CleanCup()
+        {
+            throw new NotImplementedException();
+        }
+
+        private void AddStirrer()
+        {
+            throw new NotImplementedException();
+        }
+
+        public abstract void ExecuteTemplate();
+
+        public abstract bool IsCold();
     }
 }
